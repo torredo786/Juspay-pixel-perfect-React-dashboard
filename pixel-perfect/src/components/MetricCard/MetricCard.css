@@ -1,0 +1,84 @@
+.metric-card {
+  border-radius: 12px !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer;
+}
+
+.light-metric-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+}
+
+.dark-metric-card {
+  background: #1f1f1f !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.dark-metric-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
+}
+
+.metric-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metric-title {
+  font-size: 14px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+.metric-value {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.metric-change {
+  margin-top: 4px;
+}
+
+.change-icon {
+  font-size: 12px;
+}
+
+.change-icon.positive {
+  color: #52c41a;
+}
+
+.change-icon.negative {
+  color: #ff4d4f;
+}
+
+.change-text {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.change-text.positive {
+  color: #52c41a;
+}
+
+.change-text.negative {
+  color: #ff4d4f;
+}
+
+.trend-sparkline {
+  margin-left: 8px;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .metric-value {
+    font-size: 28px !important;
+  }
+}

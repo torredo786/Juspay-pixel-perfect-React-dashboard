@@ -4,8 +4,9 @@
 }
 
 .main-layout {
-  margin-left: 256px;
+  margin-left: 213px;
   transition: margin-left 0.3s ease;
+  border-right: 1px solid var(--black-10, #1C1C1C1A)
 }
 
 .main-layout.collapsed {
@@ -27,7 +28,7 @@
   .main-layout {
     margin-left: 0;
   }
-  
+
   .content-wrapper {
     flex-direction: column;
   }

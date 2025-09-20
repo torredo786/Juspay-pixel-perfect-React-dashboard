@@ -1,10 +1,8 @@
 .notifications-panel {
-  width: 320px;
-  padding: 24px;
-  height: calc(100vh - 64px);
-  overflow-y: auto;
+  width: 280px;
   border-left: 1px solid #f0f0f0;
   transition: all 0.3s ease;
+  padding: 8px 20px;
 }
 
 .dark-panel {
@@ -12,7 +10,6 @@
 }
 
 .panel-card {
-  border-radius: 12px !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
 }
 
@@ -21,9 +18,7 @@
 }
 
 .panel-header {
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #f0f0f0;
+  padding: 20px 0 4px 0;
 }
 
 .dark-panel .panel-header {
@@ -31,13 +26,16 @@
 }
 
 .notification-icon {
-  width: 32px;
-  height: 32px;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(24, 144, 255, 0.1);
+  margin-inline-end: 0;
+  /* remove the default spacing */
+
 }
 
 .ant-list-item-meta-content {
@@ -63,6 +61,7 @@
     background: #ffffff;
     box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
     transform: translateX(100%);
+
   }
 
   .notifications-panel.visible {
@@ -79,4 +78,8 @@
   .notifications-panel {
     width: 280px;
   }
+}
+
+.ant-list-item-meta-avatar {
+  margin-inline-end: 0 !important;
 }

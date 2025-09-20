@@ -23,18 +23,20 @@ const Dashboard = () => {
   return (
     <Layout className="dashboard-layout">
       <Sidebar collapsed={sidebarCollapsed} />
-      <Layout className="main-layout">
-        <Header 
+      <Layout className="main-layout" >
+        <Header
           onToggleSidebar={toggleSidebar}
           onToggleNotifications={toggleNotifications}
         />
         <Content className="dashboard-content">
           <div className="content-wrapper">
             <MainContent />
-            <NotificationsPanel visible={notificationsPanelVisible} />
           </div>
         </Content>
+
       </Layout>
+      <NotificationsPanel visible={notificationsPanelVisible} />
+
     </Layout>
   );
 };

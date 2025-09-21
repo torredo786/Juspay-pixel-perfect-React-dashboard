@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "./ProjectionsChart.css";
+import { useTheme } from '../../App';
 
 const data = [
   { month: "Jan", actual: 18, projection: 24 },
@@ -20,23 +21,29 @@ const data = [
 ];
 
 const ProjectionsChart = () => {
+  const { isDarkMode } = useTheme();
+
   return (
-    <div className="chart-card">
-      <h4 className="chart-title">Projections vs Actuals</h4>
+    <div className={`chart-card ${isDarkMode ? "darkmode" : "lightmode"}`}>
+      <h4 className="chart-title" style={{ color: isDarkMode ? "#FFFFFF" : "" }}>Projections vs Actuals</h4>
       <ResponsiveContainer width="100%" height={160}>
         <BarChart data={data} barGap={0} barSize={20}>
-          <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f0f0f0" />
+          <CartesianGrid vertical={false} stroke="#f0f0f0" />
+
           <XAxis dataKey="month" axisLine={false} tickLine={false} />
           <YAxis
+            ticks={[0, 10, 20, 30, 40]}
             tickFormatter={(value) => `${value}M`}
             axisLine={false}
             tickLine={false}
+            tickCount={4}
           />
           <Tooltip />
           <Bar dataKey="actual" stackId="a" fill="#90caf9" />
-          <Bar dataKey="projection" stackId="a" fill="#e3f2fd" />
+          <Bar dataKey="projection" stackId="a" fill="#e3f2fd" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
+
     </div>
   );
 };

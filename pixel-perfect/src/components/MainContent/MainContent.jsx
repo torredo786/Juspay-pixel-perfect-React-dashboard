@@ -60,24 +60,24 @@ const MainContent = () => {
       </div>
 
       <div className="metrics-grid">
-  <Row gutter={[16, 16]} align="top">
-    {/* Left: Metric cards grid */}
-    <Col flex="1">
-      <Row gutter={[8, 8]}>
-        {metricsData.map((metric, index) => (
-          <Col xs={12} key={index}>
-            <MetricCard {...metric} />
+        <Row gutter={[16, 16]} align="top">
+          {/* Left: Metric cards grid */}
+          <Col flex="1">
+            <Row gutter={[8, 8]}>
+              {metricsData.map((metric, index) => (
+                <Col xs={12} key={index}>
+                  <MetricCard {...metric} />
+                </Col>
+              ))}
+            </Row>
           </Col>
-        ))}
-      </Row>
-    </Col>
 
-    {/* Right: Projection chart */}
-    <Col flex="1">
-      <ProjectionsChart />
-    </Col>
-  </Row>
-</div>
+          {/* Right: Projection chart */}
+          <Col flex="1">
+            <ProjectionsChart />
+          </Col>
+        </Row>
+      </div>
 
 
       <div className="charts-section">

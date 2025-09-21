@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 16px;
+    margin: 1rem 0;
     justify-content: space-between;
     padding: 0.5rem;
 }
@@ -43,6 +43,7 @@ table {
 
 thead {
     /* background: #fafafa; */
+    opacity: 0.6;
 }
 
 th,
@@ -147,4 +148,6 @@ td {
     opacity: 0.5;
     cursor: not-allowed;
 }
-
+.list-title{
+    font-weight: 600;
+}

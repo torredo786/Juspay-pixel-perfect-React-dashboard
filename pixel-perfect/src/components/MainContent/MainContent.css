@@ -20,18 +20,15 @@
 
 .metrics-grid {
   width: 100%;
-  display: flex;
+  /* display: flex; */
 }
-
-
-
 
 
 .charts-section {
   width: 100%;
   display: flex;
   gap: 28px;
-      margin-top: 12px;
+  margin-top: 12px;
 
 }
 
@@ -61,4 +58,9 @@
 .metric-card .ant-card-body {
   padding: 0 !important;
 
+}
+@media (max-width: 1430px) {
+  .ant-row {
+    display: block !important;
+  }
 }

@@ -63,7 +63,6 @@ const MainContent = () => {
 
       <div className="metrics-grid">
         <Row gutter={[16, 16]} align="top">
-          {/* Left: Metric cards grid */}
           <Col flex="1">
             <Row gutter={[8, 8]}>
               {metricsData.map((metric, index) => (

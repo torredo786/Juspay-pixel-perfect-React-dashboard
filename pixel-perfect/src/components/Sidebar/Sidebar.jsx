@@ -33,7 +33,7 @@ const { Sider } = Layout;
 const { Text } = Typography;
 
 
-const Sidebar = ({ collapsed }) => {
+const Sidebar = ({ collapsed, selectedKey, setSelectedKey }) => {
   const { isDarkMode } = useTheme();
 
   const [expandedItems, setExpandedItems] = useState(['dashboards', 'user-profile']);
@@ -80,7 +80,6 @@ const Sidebar = ({ collapsed }) => {
           key: 'default',
           icon: <DashboardIcon />,
           label: 'Default',
-          selected: true,
         },
         {
           key: 'Order-List',
@@ -154,11 +153,21 @@ const Sidebar = ({ collapsed }) => {
     return (
       <div key={item.key} className={`menu-item ${isChild ? 'child-item' : ''}`}>
         <div
-          className={`menu-item-content ${isSelected ? `selected ${isDarkMode ? 'darkmode-background' : 'lightmode-background'}` : 'not-selected'}`}
-          onClick={() => hasChildren && toggleExpand(item.key)}
-          style={{ cursor: hasChildren ? 'pointer' : 'default' }}
+          className={`menu-item-content ${selectedKey === item.key
+            ? `selected ${isDarkMode ? 'darkmode-background' : 'lightmode-background'}`
+            : 'not-selected'
+            }`}
+          onClick={() => {
+            if (hasChildren) {
+              toggleExpand(item.key);
+            } else {
+              setSelectedKey(item.key);
+            }
+          }}
+          style={{ cursor: 'pointer' }}
         >
-          {!isChild && <img src={isDarkMode ? arrowDarkMode : ArrowDropDwon} className={`${isSelected || item.key==="Order-List" ? 'arrow-dropdown' : ""} ${isExpanded ? "arrow-down-dropdown" : ""}`}></img>
+
+          {!isChild && <img src={isDarkMode ? arrowDarkMode : ArrowDropDwon} className={`${isSelected || ["Order-List", "default"].includes(item.key) ? 'arrow-dropdown' : ""} ${isExpanded ? "arrow-down-dropdown" : ""}`}></img>
           }
           {item.icon && (
             <span className="menu-icon">{item.icon}</span>

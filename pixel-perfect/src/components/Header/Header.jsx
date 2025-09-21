@@ -11,7 +11,7 @@ import Bellicon from "../../assets/Bellicon.jsx"
 
 const { Header: AntHeader } = Layout;
 
-const Header = ({ onToggleSidebar, onToggleNotifications }) => {
+const Header = ({ onToggleSidebar, onToggleNotifications, selectedKey }) => {
   const { isDarkMode, toggleTheme } = useTheme();
   const [searchValue, setSearchValue] = useState('');
 
@@ -32,7 +32,7 @@ const Header = ({ onToggleSidebar, onToggleNotifications }) => {
         <span><StarIcon /></span>
         <div className='breadcrumb'>
           <span className="title">Dashboards </span>  <span className="title">/ {" "}</span>
-          <span>Default</span>
+          <span>{selectedKey}</span>
         </div>
       </div>
 

@@ -5,10 +5,13 @@ import Header from '../Header/Header';
 import MainContent from '../MainContent/MainContent';
 import NotificationsPanel from '../NotificationsPanel/NotificationsPanel';
 import './Dashboard.css';
+import OrderList from '../Charts/OrderList';
 
 const { Content } = Layout;
 
 const Dashboard = () => {
+  const [selectedKey, setSelectedKey] = useState('default');
+
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [notificationsPanelVisible, setNotificationsPanelVisible] = useState(true);
 
@@ -22,16 +25,18 @@ const Dashboard = () => {
 
   return (
     <Layout className="dashboard-layout">
-      <Sidebar collapsed={sidebarCollapsed} />
+      <Sidebar collapsed={sidebarCollapsed} selectedKey={selectedKey} setSelectedKey={setSelectedKey} />
       <Layout className="main-layout" >
         <Header
           onToggleSidebar={toggleSidebar}
           onToggleNotifications={toggleNotifications}
+          selectedKey={selectedKey}
         />
         <Content className="dashboard-content">
-          <div className="content-wrapper">
+          {selectedKey === "default" ? <div className="content-wrapper">
             <MainContent />
-          </div>
+          </div> :
+            <OrderList/>}
         </Content>
 
       </Layout>

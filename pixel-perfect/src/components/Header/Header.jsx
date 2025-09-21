@@ -41,7 +41,7 @@ const Header = ({ onToggleSidebar, onToggleNotifications, selectedKey }) => {
           <div className="search-container">
             <input
               type="text"
-              className={`search-input ${isDarkMode ? "lightmode-text" : "darkmode-text"}`}
+              className={`search-input ${isDarkMode ? "darkmode" : "lightmode"}`}
               placeholder="Search"
               value={searchValue}
               onChange={handleSearchChange}

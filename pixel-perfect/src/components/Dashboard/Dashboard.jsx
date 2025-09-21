@@ -6,6 +6,7 @@ import MainContent from '../MainContent/MainContent';
 import NotificationsPanel from '../NotificationsPanel/NotificationsPanel';
 import './Dashboard.css';
 import OrderList from '../Charts/OrderList';
+import NoData from '../Charts/NoData';
 
 const { Content } = Layout;
 
@@ -36,7 +37,7 @@ const Dashboard = () => {
           {selectedKey === "default" ? <div className="content-wrapper">
             <MainContent />
           </div> :
-            <OrderList/>}
+            selectedKey === "Order-List" ? <OrderList /> : <NoData/>}
         </Content>
 
       </Layout>

@@ -2,8 +2,6 @@
     background: var(--Primary-Light, #F7F9FB);
 }
 
-.darkmode {}
-
 .revenue-title {
     display: flex;
     gap: 1rem;

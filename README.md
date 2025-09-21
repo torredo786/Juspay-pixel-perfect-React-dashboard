@@ -32,33 +32,6 @@ This project demonstrates a professional dashboard UI with theming, charts, tabl
 - 🧹 **ESLint** – Code linting and formatting  
 - 🎯 **CSS Modules** – Scoped styling at component level  
 
----
-
-## 📂 Folder Structure
-
-
-
-pixel-perfect/
-├── public/
-│ └── vite.svg
-├── src/
-│ ├── assets/ # SVGs and icon components
-│ ├── components/
-│ │ ├── Charts/ # Chart and analytics components
-│ │ ├── Dashboard/ # Main dashboard layout
-│ │ ├── Header/ # Top navigation bar
-│ │ ├── MainContent/ # Dashboard main content
-│ │ ├── MetricCard/ # Metric summary cards
-│ │ ├── NotificationsPanel/ # Notifications and activities
-│ │ ├── Sidebar/ # Sidebar navigation
-│ │ └── ui/ # UI primitives (accordion, button, etc.)
-│ ├── App.jsx # Root app with theme providers
-│ ├── main.jsx # Entry point
-│ └── index.css # Global styles
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
 
 
 ---

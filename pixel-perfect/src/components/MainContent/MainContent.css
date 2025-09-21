@@ -1,23 +1,31 @@
 .main-content {
   flex: 1;
-  padding: 24px;
-  max-width: calc(100vw - 256px - 320px);
+  padding: 28px;
   overflow-x: hidden;
 }
 
 .content-header {
-  margin-bottom: 24px;
+  margin-bottom: 1.2rem;
 }
 
 .page-title {
-  margin: 0 !important;
   font-weight: 600;
-  font-size: 28px;
+  font-style: Semi Bold;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  padding: 4px 8px;
+
 }
 
 .metrics-grid {
-  margin-bottom: 24px;
+  width: 100%;
+  display: flex;
 }
+
+
+
+
 
 .charts-section {
   width: 100%;
@@ -39,8 +47,14 @@
     max-width: 100vw;
     padding: 16px;
   }
-  
+
   .page-title {
     font-size: 24px;
   }
+}
+
+/* remove default Card body padding */
+.metric-card .ant-card-body {
+  padding: 0 !important;
+
 }

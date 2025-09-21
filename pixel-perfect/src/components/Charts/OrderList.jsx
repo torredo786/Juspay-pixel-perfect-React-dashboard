@@ -177,7 +177,8 @@ export default function OrderList() {
                     {Array.from({ length: totalPages }, (_, i) => (
                         <button
                             key={i + 1}
-                            className={`${currentPage === i + 1 ? "active" : ""}${isDarkMode ? "lightmode-text" : "darkmode-text"} `}
+                            className={`${currentPage === i + 1 ? "active" : ""} ${isDarkMode ? "lightmode-text" : "darkmode-text"}`}
+
                             onClick={() => setCurrentPage(i + 1)}
                         >
                             {i + 1}

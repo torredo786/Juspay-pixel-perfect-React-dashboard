@@ -9,6 +9,8 @@ import { useTheme } from '../../App';
 import PlusIcon from "../../assets/PlusIcon";
 import StackIcon from "../../assets/StackIcon";
 import SortIcon from "../../assets/SortIcon";
+import CalenderIcon from "../../assets/CalenderIcon";
+import Ribbon from "antd/es/badge/Ribbon";
 
 const allOrders = [
     { id: "#CM9801", user: "Natali Craig", project: "Landing Page", address: "Meadow Lane Oakland", date: "Just now", status: "In Progress", avatar: Avatar6 },
@@ -173,7 +175,7 @@ export default function OrderList() {
                 </td>
                 <td>{o.project}</td>
                 <td>{o.address}</td>
-                <td>{o.date}</td>
+                <td><span style={{marginRight: "4px"}}><CalenderIcon/></span>{o.date}</td>
                 <td>
                   <span className={statusColors[o.status]}>
                     <span className="dot"></span>

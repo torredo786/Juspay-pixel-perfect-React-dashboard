@@ -1,0 +1,22 @@
+.lightmode {
+    background: var(--Primary-Light, #F7F9FB);
+}
+
+.darkmode {}
+
+.revenue-title {
+    display: flex;
+    gap: 1rem;
+    margin-left: 26px;
+    margin-bottom: 18px;
+
+}
+
+.container {
+    padding: 1.5rem 0;
+    width: 752px;
+    border-radius: 1rem;
+}
+.revenue{
+    font-weight: 600;
+}

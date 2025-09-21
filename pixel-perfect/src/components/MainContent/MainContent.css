@@ -29,6 +29,10 @@
 
 .charts-section {
   width: 100%;
+  display: flex;
+  gap: 28px;
+      margin-top: 12px;
+
 }
 
 .chart-container {

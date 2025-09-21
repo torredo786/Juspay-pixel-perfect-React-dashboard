@@ -1,0 +1,38 @@
+.card {
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: fit-content;
+  margin-top: 16px;
+  width: 751px;
+}
+
+.title-table {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+.product-table thead th {
+  text-align: left;
+  padding-bottom: 8px;
+  font-weight: 500;
+  color: #6b7280;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.product-table tbody td {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.product-table tbody tr:last-child td {
+  border-bottom: none;
+}

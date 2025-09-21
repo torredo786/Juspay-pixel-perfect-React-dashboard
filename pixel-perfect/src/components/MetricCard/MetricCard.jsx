@@ -18,11 +18,11 @@ const MetricCard = ({ title, value, change, isPositive, bgColor, txtcolor }) => 
       style={{ backgroundColor: bgColor }}
     >
       <div className="metric-content" >
-        <p className="metric-title">{title}</p>
+        <p className="metric-title " style={{ color: txtcolor }}>{title}</p>
         <div className='growth-container'>
-          <span className="metric-value" style={{color: txtcolor}}>{value}</span>
-          <div className="metric-change" style={{color: txtcolor}}>
-            <span className={`change-text`} style={{color: txtcolor}}>
+          <span className="metric-value" style={{ color: txtcolor }}>{value}</span>
+          <div className="metric-change" style={{ color: txtcolor }}>
+            <span className={`change-text`} style={{ color: txtcolor }}>
               {change}
             </span>
             {isPositive ? (

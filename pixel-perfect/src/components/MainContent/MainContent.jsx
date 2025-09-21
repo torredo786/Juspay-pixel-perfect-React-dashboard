@@ -6,6 +6,8 @@ import RevenueChart from '../Charts/RevenueChart';
 import WorldMapChart from '../Charts/WorldMapChart';
 import './MainContent.css';
 import { useTheme } from '../../App';
+import SellingTable from "../Charts/SellingTable"
+import TotalSales from "../Charts/TotalSales"
 
 
 const { Title } = Typography;
@@ -81,15 +83,16 @@ const MainContent = () => {
 
 
       <div className="charts-section">
-
-        <Row gutter={[24, 24]} style={{ marginTop: 24 }}>
-          <Col xs={24}>
-            <div className="chart-container fade-in-up">
-              <RevenueChart />
-            </div>
-          </Col>
-        </Row>
+        <RevenueChart />
+        <WorldMapChart/>
       </div>
+
+      <div className="charts-section">
+        <SellingTable/>
+        <TotalSales/>
+      </div>
+
+
     </div>
   );
 };
